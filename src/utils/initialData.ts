@@ -1,0 +1,196 @@
+import { MenuItem, TokenOrder } from '../types';
+
+export const INITIAL_MENU_ITEMS: MenuItem[] = [
+  {
+    id: 'item-1',
+    name: 'Special Veg Thali / Meal',
+    category: 'Meals',
+    price: 90,
+    prepTimeMinutes: 7,
+    description: 'Steamed rice, 2 rotis, paneer sabzi, dal tadka, salad & sweet.',
+    isVeg: true,
+    popular: true,
+  },
+  {
+    id: 'item-2',
+    name: 'Crispy Masala Dosa',
+    category: 'Meals',
+    price: 65,
+    prepTimeMinutes: 6,
+    description: 'Golden fermented crepe filled with spiced potato masala, served with sambar & coconut chutney.',
+    isVeg: true,
+    popular: true,
+  },
+  {
+    id: 'item-3',
+    name: 'Veg Hakka Noodles & Manchurian',
+    category: 'Meals',
+    price: 85,
+    prepTimeMinutes: 8,
+    description: 'Wok-tossed noodles with crunchy bell peppers and gravy veg manchurian.',
+    isVeg: true,
+    popular: true,
+  },
+  {
+    id: 'item-4',
+    name: 'Grilled Paneer Tikka Sandwich',
+    category: 'Snacks',
+    price: 60,
+    prepTimeMinutes: 4,
+    description: 'Layered cottage cheese with mint chutney, tomatoes, grilled to perfection.',
+    isVeg: true,
+    popular: true,
+  },
+  {
+    id: 'item-5',
+    name: 'Samosa Pav (2 pcs)',
+    category: 'Quick Bites',
+    price: 35,
+    prepTimeMinutes: 2,
+    description: 'Golden potato samosas inside warm buttered pav with spicy garlic chutney.',
+    isVeg: true,
+    popular: true,
+  },
+  {
+    id: 'item-6',
+    name: 'College Special Crispy Fries',
+    category: 'Snacks',
+    price: 45,
+    prepTimeMinutes: 3,
+    description: 'Salted potato batons dusted with peri-peri canteen spice blend.',
+    isVeg: true,
+  },
+  {
+    id: 'item-7',
+    name: 'Steamed Idli Sambhar (2 pcs)',
+    category: 'Quick Bites',
+    price: 40,
+    prepTimeMinutes: 2,
+    description: 'Soft rice cakes served with hot lentil vegetable stew and coconut chutney.',
+    isVeg: true,
+  },
+  {
+    id: 'item-8',
+    name: 'Cold Coffee with Ice Cream',
+    category: 'Beverages',
+    price: 50,
+    prepTimeMinutes: 2,
+    description: 'Thick blended espresso shake topped with a scoop of vanilla ice cream.',
+    isVeg: true,
+    popular: true,
+  },
+  {
+    id: 'item-9',
+    name: 'Fresh Mint Lime Cooler',
+    category: 'Beverages',
+    price: 30,
+    prepTimeMinutes: 2,
+    description: 'Chilled sparking lemonade with crushed mint leaves and rock salt.',
+    isVeg: true,
+  },
+  {
+    id: 'item-10',
+    name: 'Masala Chai',
+    category: 'Beverages',
+    price: 15,
+    prepTimeMinutes: 2,
+    description: 'Hot brewed ginger-cardamom tea infused with fresh milk.',
+    isVeg: true,
+  }
+];
+
+// Realistic seeded tokens so the app feels alive immediately
+export const INITIAL_ORDERS: TokenOrder[] = [
+  {
+    id: 'order-101',
+    tokenNumber: 101,
+    studentName: 'Rahul Sharma',
+    studentId: 'CS-2024-042',
+    counterNumber: 1,
+    items: [
+      { menuItemId: 'item-2', name: 'Crispy Masala Dosa', quantity: 1, price: 65, prepTimeMinutes: 6 },
+      { menuItemId: 'item-10', name: 'Masala Chai', quantity: 1, price: 15, prepTimeMinutes: 2 }
+    ],
+    totalAmount: 80,
+    status: 'completed',
+    createdAt: Date.now() - 25 * 60 * 1000,
+    estimatedWaitMinutes: 6,
+    readyAt: Date.now() - 15 * 60 * 1000,
+    completedAt: Date.now() - 10 * 60 * 1000,
+  },
+  {
+    id: 'order-102',
+    tokenNumber: 102,
+    studentName: 'Priya Patel',
+    studentId: 'EC-2023-118',
+    counterNumber: 2,
+    items: [
+      { menuItemId: 'item-1', name: 'Special Veg Thali / Meal', quantity: 1, price: 90, prepTimeMinutes: 7 }
+    ],
+    totalAmount: 90,
+    status: 'completed',
+    createdAt: Date.now() - 20 * 60 * 1000,
+    estimatedWaitMinutes: 7,
+    readyAt: Date.now() - 10 * 60 * 1000,
+    completedAt: Date.now() - 6 * 60 * 1000,
+  },
+  {
+    id: 'order-103',
+    tokenNumber: 103,
+    studentName: 'Ananya Verma',
+    studentId: 'IT-2024-089',
+    counterNumber: 1,
+    items: [
+      { menuItemId: 'item-8', name: 'Cold Coffee with Ice Cream', quantity: 2, price: 50, prepTimeMinutes: 2 },
+      { menuItemId: 'item-6', name: 'College Special Crispy Fries', quantity: 1, price: 45, prepTimeMinutes: 3 }
+    ],
+    totalAmount: 145,
+    status: 'ready',
+    createdAt: Date.now() - 12 * 60 * 1000,
+    estimatedWaitMinutes: 5,
+    readyAt: Date.now() - 2 * 60 * 1000,
+  },
+  {
+    id: 'order-104',
+    tokenNumber: 104,
+    studentName: 'Aditya Rao',
+    studentId: 'ME-2022-015',
+    counterNumber: 1,
+    items: [
+      { menuItemId: 'item-3', name: 'Veg Hakka Noodles & Manchurian', quantity: 1, price: 85, prepTimeMinutes: 8 }
+    ],
+    totalAmount: 85,
+    status: 'preparing',
+    createdAt: Date.now() - 8 * 60 * 1000,
+    estimatedWaitMinutes: 8,
+  },
+  {
+    id: 'order-105',
+    tokenNumber: 105,
+    studentName: 'Sneha Kulkarni',
+    studentId: 'CS-2023-091',
+    counterNumber: 2,
+    items: [
+      { menuItemId: 'item-4', name: 'Grilled Paneer Tikka Sandwich', quantity: 1, price: 60, prepTimeMinutes: 4 },
+      { menuItemId: 'item-9', name: 'Fresh Mint Lime Cooler', quantity: 1, price: 30, prepTimeMinutes: 2 }
+    ],
+    totalAmount: 90,
+    status: 'waiting',
+    createdAt: Date.now() - 4 * 60 * 1000,
+    estimatedWaitMinutes: 10,
+  },
+  {
+    id: 'order-106',
+    tokenNumber: 106,
+    studentName: 'Vikram Singh',
+    studentId: 'CV-2024-033',
+    counterNumber: 1,
+    items: [
+      { menuItemId: 'item-5', name: 'Samosa Pav (2 pcs)', quantity: 2, price: 35, prepTimeMinutes: 2 }
+    ],
+    totalAmount: 70,
+    status: 'waiting',
+    createdAt: Date.now() - 2 * 60 * 1000,
+    estimatedWaitMinutes: 12,
+  }
+];
